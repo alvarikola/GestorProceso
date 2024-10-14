@@ -57,7 +57,12 @@ public class Controlador implements ActionListener{
                 Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else if (e.getSource() == vista.btnMatar) {
-        
+            var nuevoProceso = vista.txtNuevoProceso.getText();
+            try {
+                modelo.MatarProcesos(nuevoProceso);
+            } catch (IOException ex) {
+                Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     
