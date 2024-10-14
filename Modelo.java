@@ -43,7 +43,11 @@ public class Modelo {
         
     }
     public void MatarProcesos() {
-        
+        public void MatarProcesos(String proceso) throws IOException {
+        ProcessBuilder pb01 = new ProcessBuilder("killall", proceso);
+        Process p01 = pb01.start();
+
+    }
 
     }
     public void NuevoProceso(String proceso) throws IOException {                                       
