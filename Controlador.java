@@ -51,7 +51,11 @@ public class Controlador implements ActionListener{
             }
         } else if (e.getSource() == vista.btnNuevo) {
             var nuevoProceso = vista.txtNuevoProceso.getText();
-            modelo.NuevoProceso(nuevoProceso);
+            try {
+                modelo.NuevoProceso(nuevoProceso);
+            } catch (IOException ex) {
+                Logger.getLogger(Controlador.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } else if (e.getSource() == vista.btnMatar) {
         
         }
